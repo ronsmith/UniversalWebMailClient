@@ -8,6 +8,11 @@ def root():
     return '<h1>Universal Web Mail Client</h1>'
 
 
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+
 @app.route('/hello/')
 @app.route('/hello/<name>')
 def hello(name=None):
